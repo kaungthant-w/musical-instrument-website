@@ -1,0 +1,36 @@
+.projects {
+
+    grid-column: nav-start / full-end;
+    grid-row: project-start / project-end;
+
+    width: 100%;
+    height: 100%;
+
+    &__1 {
+        font-size:5rem;
+        margin: 3rem 2rem;
+    }
+
+    &__2 {
+        &--img {
+        
+            width: 100%;
+            height: 100%;
+
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+            gap: 1rem;
+            place-items: center;
+    
+            & img {
+    
+                width: 30rem;
+                height: 30rem;
+                margin: 2rem;
+                box-shadow: 3px 2px 14px rgb(148, 146, 146);
+            }
+        }
+
+    }
+
+}

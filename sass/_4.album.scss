@@ -1,0 +1,75 @@
+.sectionAlbum {
+    grid-column: nav-start / full-end;
+    grid-row: album-start / album-end;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 2rem;
+
+        
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        gap: 1rem;
+        place-items: center;
+    }
+
+    &__content {
+      width: 30rem;
+      height: 30rem;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    &__album {
+      width:100%;
+      height: 30rem;
+      transition: all .5s;
+    }
+    
+    &__caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 30%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      transition: all 0.5s;
+      background-color: black;
+      transform: translateY(100%);
+    }
+    
+    &__heading {
+      text-transform: uppercase;
+      margin: 1rem 0;
+      font-size: 1.7rem;
+      letter-spacing: 0.4rem;
+    }
+    
+    &__para {
+      font-size: 1.5rem;
+      text-transform: capitalize;
+      margin-bottom: 1rem;
+    }
+    
+    &__content:hover &__caption {
+      transform: translateY(0);
+    }
+    
+    &__content:hover &__album {
+      transform: translateY(-30%);
+    }
+
+    &__head {
+        // margin: 2rem;
+        padding: 2rem;
+        font-size: 4rem;
+    }
+    
+
+}
